@@ -11,6 +11,27 @@
 </head>
 
 <body>
+  <nav class="navbar is-light">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" style="font-weight:bold;">
+          Portfolio
+        </a>
+        <span class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="index.html" class="navbar-item">Home</a>
+          <a class="navbar-item is-active">Portfolio</a>
+          <a class="navbar-item">CV</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <div class="columns is-multiline">
     <div class="column is-full bg">
@@ -125,6 +146,16 @@
     </div>
   </div>
 
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
 </body>
 
 </html>
